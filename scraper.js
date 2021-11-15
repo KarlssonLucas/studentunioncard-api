@@ -7,14 +7,17 @@ const result = async (request, response) => {
     }
 
     (async () => {
-        const browser = await puppeteer.launch({
+        const chromeOptions = {
+            headless: true,
+            defaultViewport: null,
             args: [
-                '--no-sandbox',
-                '--disable-setuid-sandbox',
+                "--no-sandbox",
+                "--single-process",
+                "--no-zygote"
             ],
-        });
+        };
+        const browser = await puppeteer.launch(chromeOptions);
         const page = await browser.newPage();
-
         const cookies = [{
             'url': 'https://kortladdning3.chalmerskonferens.se/CardLoad_Order.aspx',
             'name': 'userInfo',
