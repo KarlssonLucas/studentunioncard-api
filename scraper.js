@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const { request, response } = require("express");
 
 const result = async (request, response) => {
-    if(request.body.cookie == null) {
+    if(request.params.cookie == "") {
         response.status(400).send("no cookie")
     }
 
@@ -13,7 +13,7 @@ const result = async (request, response) => {
         const cookies = [{
             'url': 'https://kortladdning3.chalmerskonferens.se/CardLoad_Order.aspx',
             'name': 'userInfo',
-            'value': request.body.cookie
+            'value': request.params.cookie
           },{
             'url': 'https://kortladdning3.chalmerskonferens.se/CardLoad_Order.aspx',
             'name': 'AspxAutoDetectCookieSupport',

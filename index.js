@@ -6,7 +6,7 @@ const port = process.env.PORT || 5000
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
-app.get("/", scraper.result)   
+app.get("/:cookie", scraper.result)   
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
