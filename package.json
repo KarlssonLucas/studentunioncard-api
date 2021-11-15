@@ -26,6 +26,11 @@
     "puppeteer": "^11.0.0",
     "puppeteer-core": "^11.0.0"
   },
+  "buildpacks": [
+    {
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
+    }
+  ],
   "engines": {
     "node": "^15.14.0"
   }
