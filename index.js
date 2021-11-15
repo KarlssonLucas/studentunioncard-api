@@ -7,6 +7,6 @@ app.use(express.urlencoded({ extended: false}));
 
 app.get("/", scraper.result)   
 
-app.listen(3000, () => {
- console.log("Server running on port 3000");
+app.listen(5000, () => {
+ console.log("Server running on port 5000");
 });
