@@ -20,15 +20,17 @@ const result = async (request, response) => {
             'value': '1'
           }];
           
-          await page.setCookie(...cookies);
+        await page.setCookie(...cookies);
 
-        await page.goto('https://kortladdning3.chalmerskonferens.se/CardLoad_Order.aspx');      
-        
+        await page.goto('https://kortladdning3.chalmerskonferens.se/CardLoad_Order.aspx',{waitUntil: 'domcontentloaded'});  
+
         const textContent = await page.evaluate(() => {
             return document.querySelector("#txtPTMCardValue").innerHTML;
         });
-        response.status(400).send(textContent)
+        
         await browser.close();
+        await response.status(400).send(textContent)
+
       })();
 }
 
