@@ -2,6 +2,10 @@ const puppeteer = require('puppeteer');
 const { request, response } = require("express");
 
 const result = async (request, response) => {
+    if(request.body.cookie == null) {
+        response.status(400).send("no cookie")
+    }
+
     (async () => {
         const browser = await puppeteer.launch();      
         const page = await browser.newPage();
