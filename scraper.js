@@ -25,6 +25,10 @@ const result = async (request, response) => {
         await page.goto('https://kortladdning3.chalmerskonferens.se/CardLoad_Order.aspx',{waitUntil: 'domcontentloaded'});  
 
         const textContent = await page.evaluate(() => {
+            if (document.querySelector("#txtPTMCardValue") == null) {
+                return "wrongcookie";
+            }
+
             return document.querySelector("#txtPTMCardValue").innerHTML;
         });
         
