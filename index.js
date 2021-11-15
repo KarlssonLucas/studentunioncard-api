@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
 const scraper = require('./scraper');
+const port = process.env.PORT || 5000
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
 app.get("/", scraper.result)   
 
-app.listen(5000, () => {
- console.log("Server running on port 5000");
-});
+app.listen(port, () => {
+    console.log(`App running on port ${port}.`)
+})
