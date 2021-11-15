@@ -1,0 +1,30 @@
+{
+  "name": "studentunioncard-api",
+  "version": "1.0.0",
+  "description": "api for studentunion card",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarlssonLucas/studentunioncard-api.git"
+  },
+  "author": "Lucas Karlsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarlssonLucas/studentunioncard-api/issues"
+  },
+  "homepage": "https://github.com/KarlssonLucas/studentunioncard-api#readme",
+  "dependencies": {
+    "chromium": "^3.0.3",
+    "cross-fetch": "^3.1.4",
+    "express": "^4.17.1",
+    "node-fetch": "^3.1.0",
+    "puppeteer": "^11.0.0",
+    "puppeteer-core": "^11.0.0"
+  },
+  "engines": {
+    "node": "^15.14.0"
+  }
+}
