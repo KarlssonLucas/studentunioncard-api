@@ -41,7 +41,7 @@ const result = async (request, response) => {
         });
         
         await browser.close();
-        await response.status(400).send(textContent)
+        await response.status(400).json({bal: textContent})
 
       })();
 }
