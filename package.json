@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node build/index.js",
     "postinstall": "tsc",
-    "dev": "nodemon source/index.ts",
-    "build": "rm -rf build/ && prettier --write source/ && tsc"
+    "dev": "nodemon source/index.ts"
   },
   "repository": {
     "type": "git",
