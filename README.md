@@ -1,6 +1,1 @@
-# studentunioncard-api
-
-run:
-
-tsc index.ts
-node index.js
+<h3 align="center"> Student Union Card API </h3>
