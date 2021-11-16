@@ -4,6 +4,8 @@
   "description": "API for student union card balance",
   "main": "source/server.ts",
   "scripts": {
+    "start": "node build/index.js",
+    "postinstall": "cd ./src && tsc",
     "dev": "nodemon source/index.ts",
     "build": "rm -rf build/ && prettier --write source/ && tsc"
   },
